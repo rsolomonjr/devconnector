@@ -1,3 +1,7 @@
+const dbURL = `mongodb://rodney:${encodeURIComponent(
+  "robear13"
+)}@ds159164.mlab.com:59164/devconnect`;
 module.exports = {
-  mongoURI: "mongodb://rodney:robear13@ds159164.mlab.com:59164/devconnect"
+  mongoURI: dbURL,
+  secretOrKey: "secret"
 };
