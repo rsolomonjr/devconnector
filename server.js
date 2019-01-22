@@ -3,7 +3,7 @@ const http = require("http");
 const reload = require("reload");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-// const passport = require('passport');
+const passport = require("passport");
 
 const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
@@ -31,7 +31,11 @@ app.set("view engine", "ejs");
 app.set("views", "./views");
 app.use(express.static("public"));
 
-app.get("/", (req, res) => res.render("home"));
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport Config
+require("./config/passport.js")(passport);
 
 // use routes //
 app.use("/api/users", users);
