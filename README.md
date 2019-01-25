@@ -1,4 +1,4 @@
-# Dev Connector
+# Dev Connector :computer::arrow_up::woman::man:
 
 <h1>Social Media Network for Developers</h1>
 <hr>
