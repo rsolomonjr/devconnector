@@ -1,6 +1,7 @@
-# Dev Connector :computer::arrow_up::woman::man:
+# Dev Connector
 
 <h1>Social Media Network for Developers</h1>
+:computer::arrow_up::woman::man:
 <hr>
 MERN Social Network for Developers 
 <br>
