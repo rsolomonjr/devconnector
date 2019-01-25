@@ -1,4 +1,5 @@
-# devconnector
+# Dev Connector
+
 <h1>Social Media Network for Developers</h1>
 <hr>
 MERN Social Network for Developers 
@@ -9,5 +10,3 @@ MERN Social Network for Developers
   <li>Tested in Postman</li>
   <li>Mongoose and Passport</li>
 </ul>
-  
-
