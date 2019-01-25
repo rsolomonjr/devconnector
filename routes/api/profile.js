@@ -3,14 +3,14 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
 
-// Load Validation
+//  Load Validation
 const validateProfileInput = require("../../validation/profile");
 const validateExperienceInput = require("../../validation/experience.js");
 const validateEducationInput = require("../../validation/education.js");
 
-// Load Profile Model
+//  Load Profile Model
 const Profile = require("../../models/Profile");
-//Load User Profile
+//  Load User Profile
 const User = require("../../models/User");
 
 // @route     GET  api/profile/test
