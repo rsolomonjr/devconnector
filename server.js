@@ -11,6 +11,10 @@ const posts = require("./routes/api/posts");
 
 const app = express();
 
+// Body Parser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // mongodb //
 const db = require("./config/keys").mongoURI;
 
@@ -45,7 +49,3 @@ server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 reload(app);
-
-// Body Parser middleware
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());

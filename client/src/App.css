@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "DejaVu Sans Mono";
+  src: url("./fonts/DejaVuSansMono.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "dejavu_sans_monobook";
+  src: url("./fonts/dejavusansmono-webfont.woff2") format("woff2"),
+    url("./fonts/dejavusansmono-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 img {
   width: 100%;
 }
@@ -36,4 +49,9 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+.invalid-feedback,
+.text-muted {
+  font-family: "DejaVu Sans Mono", "dejavu_sans_monobook", monospace;
 }
