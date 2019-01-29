@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
 import classnames from "classnames";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
@@ -36,7 +37,7 @@ class Register extends Component {
       password2: this.state.password2
     };
 
-    this.props.registerUser(newUser);
+    this.props.registerUser(newUser, this.props.history);
   };
 
   render() {
@@ -99,10 +100,10 @@ class Register extends Component {
                     value={this.state.password}
                     onChange={this.onChange}
                   />
+                  {errors.password && (
+                    <div className="invalid-feedback">{errors.password}</div>
+                  )}
                 </div>
-                {errors.password && (
-                  <div className="invalid-feedback">{errors.password}</div>
-                )}
                 <div className="form-group">
                   <input
                     type="password"
@@ -114,10 +115,10 @@ class Register extends Component {
                     value={this.state.password2}
                     onChange={this.onChange}
                   />
+                  {errors.password2 && (
+                    <div className="invalid-feedback">{errors.password2}</div>
+                  )}
                 </div>
-                {errors.password2 && (
-                  <div className="invalid-feedback">{errors.password2}</div>
-                )}
                 <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>
             </div>
@@ -142,4 +143,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { registerUser }
-)(Register);
+)(withRouter(Register));
