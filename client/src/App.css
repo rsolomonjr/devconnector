@@ -54,4 +54,14 @@ img {
 .invalid-feedback,
 .text-muted {
   font-family: "DejaVu Sans Mono", "dejavu_sans_monobook", monospace;
+  margin: 10px 0;
+}
+
+.text-muted.optional {
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+.input-group-text {
+  max-width: 40px !important;
 }
