@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import TextFieldGroup from "../common/TextFieldGroup";
-// import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
+import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { addExperience } from "../../actions/profileActions";
@@ -69,9 +69,9 @@ class AddExperience extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <a href="/dashboard" className="btn btn-light">
+              <Link to="/dashboard" className="btn btn-light">
                 Go Back
-              </a>
+              </Link>
               <h1 className="display-4 text-center">Add Your Experience</h1>
               <p className="lead text-center">
                 Add any developer/programming positions that you have had in the
@@ -94,7 +94,7 @@ class AddExperience extends Component {
                   error={errors.title}
                 />
                 <TextFieldGroup
-                  placeholder="* Location"
+                  placeholder="Location"
                   name="location"
                   value={this.state.location}
                   onChange={this.onChange}
@@ -131,7 +131,7 @@ class AddExperience extends Component {
                     Current Job
                   </label>
                 </div>
-                <TextFieldGroup
+                <TextAreaFieldGroup
                   placeholder="Job Description"
                   name="description"
                   value={this.state.description}
